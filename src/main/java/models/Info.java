@@ -45,6 +45,10 @@ public class Info{
 	@JsonProperty("lat")
 	private double lat;
 
+	public int getLimit() {
+		return limit;
+	}
+
 	@JsonProperty("limit")
 	private int limit;
 
