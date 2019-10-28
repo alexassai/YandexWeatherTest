@@ -45,6 +45,32 @@ public class Info{
 	@JsonProperty("lat")
 	private double lat;
 
+	@JsonProperty("limit")
+	private int limit;
+
+	public Info(boolean nr, boolean ns, boolean f, int defPressureMm, boolean h, double lon, boolean nsr, boolean n, Tzinfo tzinfo, String url, boolean p, int defPressurePa, double lat) {
+		this.nr = nr;
+		this.ns = ns;
+		F = f;
+		this.defPressureMm = defPressureMm;
+		H = h;
+		this.lon = lon;
+		this.nsr = nsr;
+		N = n;
+		this.tzinfo = tzinfo;
+		this.url = url;
+		P = p;
+		this.defPressurePa = defPressurePa;
+		this.lat = lat;
+	}
+
+
+	public Info (double lon,  double lat, int limit) {
+		this.lon = lon;
+		this.lat = lat;
+		this.limit = limit;
+	}
+
 	public void setNr(boolean nr){
 		this.nr = nr;
 	}
