@@ -1,4 +1,4 @@
-package Test;
+package Yandex.Weather;
 
 import com.jayway.restassured.RestAssured;
 import com.jayway.restassured.http.ContentType;
@@ -6,15 +6,10 @@ import org.hamcrest.Matcher;
 import org.hamcrest.Matchers;
 import org.junit.Test;
 import com.fasterxml.jackson.databind.*;
-//import src.main.java.models.*;
-
-
 
 public class TestMoscow {
 
   @Test
-
-//RequestInfo = new Info("")
 
   public void MoscowTest(){
     RestAssured.given()
