@@ -9,7 +9,7 @@ import com.fasterxml.jackson.databind.*;
 public class TestMoscow {
 
   // Moscow - lat: 55.75396, lon: 37.620393
-  Info Request = new Info(37.620393, 55.75396, 2);
+  private Info Request = new Info(37.620393, 55.75396, 2);
 
   @Test
 
