@@ -5,16 +5,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import javax.annotation.Generated;
 
 @Generated("com.robohorse.robopojogenerator")
-public class ForecastsItem{
+public class Forecast{
 
 	@JsonProperty("date")
 	private String date;
 
 	@JsonProperty("sunrise")
 	private String sunrise;
-
-	@JsonProperty("hours")
-	private List<HoursItem> hours;
 
 	@JsonProperty("week")
 	private int week;
@@ -29,16 +26,10 @@ public class ForecastsItem{
 	private String sunset;
 
 	@JsonProperty("parts")
-	private Parts parts;
+	private List<PartsItem> parts;
 
 	@JsonProperty("moon_code")
 	private int moonCode;
-
-	@JsonProperty("rise_begin")
-	private String riseBegin;
-
-	@JsonProperty("set_end")
-	private String setEnd;
 
 	public void setDate(String date){
 		this.date = date;
@@ -54,14 +45,6 @@ public class ForecastsItem{
 
 	public String getSunrise(){
 		return sunrise;
-	}
-
-	public void setHours(List<HoursItem> hours){
-		this.hours = hours;
-	}
-
-	public List<HoursItem> getHours(){
-		return hours;
 	}
 
 	public void setWeek(int week){
@@ -96,11 +79,11 @@ public class ForecastsItem{
 		return sunset;
 	}
 
-	public void setParts(Parts parts){
+	public void setParts(List<PartsItem> parts){
 		this.parts = parts;
 	}
 
-	public Parts getParts(){
+	public List<PartsItem> getParts(){
 		return parts;
 	}
 
@@ -112,37 +95,18 @@ public class ForecastsItem{
 		return moonCode;
 	}
 
-	public void setRiseBegin(String riseBegin){
-		this.riseBegin = riseBegin;
-	}
-
-	public String getRiseBegin(){
-		return riseBegin;
-	}
-
-	public void setSetEnd(String setEnd){
-		this.setEnd = setEnd;
-	}
-
-	public String getSetEnd(){
-		return setEnd;
-	}
-
 	@Override
  	public String toString(){
 		return 
-			"ForecastsItem{" + 
+			"Forecast{" + 
 			"date = '" + date + '\'' + 
 			",sunrise = '" + sunrise + '\'' + 
-			",hours = '" + hours + '\'' + 
 			",week = '" + week + '\'' + 
 			",moon_text = '" + moonText + '\'' + 
 			",date_ts = '" + dateTs + '\'' + 
 			",sunset = '" + sunset + '\'' + 
 			",parts = '" + parts + '\'' + 
 			",moon_code = '" + moonCode + '\'' + 
-			",rise_begin = '" + riseBegin + '\'' + 
-			",set_end = '" + setEnd + '\'' + 
 			"}";
 		}
 }

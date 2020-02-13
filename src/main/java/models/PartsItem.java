@@ -4,7 +4,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import javax.annotation.Generated;
 
 @Generated("com.robohorse.robopojogenerator")
-public class Evening{
+public class PartsItem{
 
 	@JsonProperty("polar")
 	private boolean polar;
@@ -28,7 +28,7 @@ public class Evening{
 	private int feelsLike;
 
 	@JsonProperty("wind_gust")
-	private int windGust;
+	private double windGust;
 
 	@JsonProperty("temp_min")
 	private int tempMin;
@@ -39,32 +39,23 @@ public class Evening{
 	@JsonProperty("temp_avg")
 	private int tempAvg;
 
-	@JsonProperty("uv_index")
-	private int uvIndex;
-
 	@JsonProperty("pressure_pa")
 	private int pressurePa;
 
 	@JsonProperty("humidity")
 	private int humidity;
 
-	@JsonProperty("_source")
-	private String source;
-
 	@JsonProperty("wind_speed")
 	private double windSpeed;
-
-	@JsonProperty("soil_moisture")
-	private double soilMoisture;
 
 	@JsonProperty("daytime")
 	private String daytime;
 
-	@JsonProperty("soil_temp")
-	private int soilTemp;
+	@JsonProperty("part_name")
+	private String partName;
 
 	@JsonProperty("prec_mm")
-	private int precMm;
+	private double precMm;
 
 	@JsonProperty("prec_prob")
 	private int precProb;
@@ -125,11 +116,11 @@ public class Evening{
 		return feelsLike;
 	}
 
-	public void setWindGust(int windGust){
+	public void setWindGust(double windGust){
 		this.windGust = windGust;
 	}
 
-	public int getWindGust(){
+	public double getWindGust(){
 		return windGust;
 	}
 
@@ -157,14 +148,6 @@ public class Evening{
 		return tempAvg;
 	}
 
-	public void setUvIndex(int uvIndex){
-		this.uvIndex = uvIndex;
-	}
-
-	public int getUvIndex(){
-		return uvIndex;
-	}
-
 	public void setPressurePa(int pressurePa){
 		this.pressurePa = pressurePa;
 	}
@@ -181,28 +164,12 @@ public class Evening{
 		return humidity;
 	}
 
-	public void setSource(String source){
-		this.source = source;
-	}
-
-	public String getSource(){
-		return source;
-	}
-
 	public void setWindSpeed(double windSpeed){
 		this.windSpeed = windSpeed;
 	}
 
 	public double getWindSpeed(){
 		return windSpeed;
-	}
-
-	public void setSoilMoisture(double soilMoisture){
-		this.soilMoisture = soilMoisture;
-	}
-
-	public double getSoilMoisture(){
-		return soilMoisture;
 	}
 
 	public void setDaytime(String daytime){
@@ -213,19 +180,19 @@ public class Evening{
 		return daytime;
 	}
 
-	public void setSoilTemp(int soilTemp){
-		this.soilTemp = soilTemp;
+	public void setPartName(String partName){
+		this.partName = partName;
 	}
 
-	public int getSoilTemp(){
-		return soilTemp;
+	public String getPartName(){
+		return partName;
 	}
 
-	public void setPrecMm(int precMm){
+	public void setPrecMm(double precMm){
 		this.precMm = precMm;
 	}
 
-	public int getPrecMm(){
+	public double getPrecMm(){
 		return precMm;
 	}
 
@@ -240,7 +207,7 @@ public class Evening{
 	@Override
  	public String toString(){
 		return 
-			"Evening{" + 
+			"PartsItem{" + 
 			"polar = '" + polar + '\'' + 
 			",icon = '" + icon + '\'' + 
 			",pressure_mm = '" + pressureMm + '\'' + 
@@ -252,14 +219,11 @@ public class Evening{
 			",temp_min = '" + tempMin + '\'' + 
 			",condition = '" + condition + '\'' + 
 			",temp_avg = '" + tempAvg + '\'' + 
-			",uv_index = '" + uvIndex + '\'' + 
 			",pressure_pa = '" + pressurePa + '\'' + 
 			",humidity = '" + humidity + '\'' + 
-			",_source = '" + source + '\'' + 
 			",wind_speed = '" + windSpeed + '\'' + 
-			",soil_moisture = '" + soilMoisture + '\'' + 
 			",daytime = '" + daytime + '\'' + 
-			",soil_temp = '" + soilTemp + '\'' + 
+			",part_name = '" + partName + '\'' + 
 			",prec_mm = '" + precMm + '\'' + 
 			",prec_prob = '" + precProb + '\'' + 
 			"}";

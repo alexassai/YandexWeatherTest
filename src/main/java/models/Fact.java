@@ -9,9 +9,6 @@ public class Fact{
 	@JsonProperty("polar")
 	private boolean polar;
 
-	@JsonProperty("accum_prec")
-	private AccumPrec accumPrec;
-
 	@JsonProperty("temp")
 	private int temp;
 
@@ -24,20 +21,14 @@ public class Fact{
 	@JsonProperty("wind_dir")
 	private String windDir;
 
-	@JsonProperty("source")
-	private String source;
-
 	@JsonProperty("feels_like")
 	private int feelsLike;
 
 	@JsonProperty("wind_gust")
-	private double windGust;
+	private int windGust;
 
 	@JsonProperty("condition")
 	private String condition;
-
-	@JsonProperty("uv_index")
-	private int uvIndex;
 
 	@JsonProperty("pressure_pa")
 	private int pressurePa;
@@ -51,14 +42,8 @@ public class Fact{
 	@JsonProperty("wind_speed")
 	private double windSpeed;
 
-	@JsonProperty("soil_moisture")
-	private double soilMoisture;
-
 	@JsonProperty("daytime")
 	private String daytime;
-
-	@JsonProperty("soil_temp")
-	private int soilTemp;
 
 	@JsonProperty("obs_time")
 	private int obsTime;
@@ -69,14 +54,6 @@ public class Fact{
 
 	public boolean isPolar(){
 		return polar;
-	}
-
-	public void setAccumPrec(AccumPrec accumPrec){
-		this.accumPrec = accumPrec;
-	}
-
-	public AccumPrec getAccumPrec(){
-		return accumPrec;
 	}
 
 	public void setTemp(int temp){
@@ -111,14 +88,6 @@ public class Fact{
 		return windDir;
 	}
 
-	public void setSource(String source){
-		this.source = source;
-	}
-
-	public String getSource(){
-		return source;
-	}
-
 	public void setFeelsLike(int feelsLike){
 		this.feelsLike = feelsLike;
 	}
@@ -127,11 +96,11 @@ public class Fact{
 		return feelsLike;
 	}
 
-	public void setWindGust(double windGust){
+	public void setWindGust(int windGust){
 		this.windGust = windGust;
 	}
 
-	public double getWindGust(){
+	public int getWindGust(){
 		return windGust;
 	}
 
@@ -141,14 +110,6 @@ public class Fact{
 
 	public String getCondition(){
 		return condition;
-	}
-
-	public void setUvIndex(int uvIndex){
-		this.uvIndex = uvIndex;
-	}
-
-	public int getUvIndex(){
-		return uvIndex;
 	}
 
 	public void setPressurePa(int pressurePa){
@@ -183,28 +144,12 @@ public class Fact{
 		return windSpeed;
 	}
 
-	public void setSoilMoisture(double soilMoisture){
-		this.soilMoisture = soilMoisture;
-	}
-
-	public double getSoilMoisture(){
-		return soilMoisture;
-	}
-
 	public void setDaytime(String daytime){
 		this.daytime = daytime;
 	}
 
 	public String getDaytime(){
 		return daytime;
-	}
-
-	public void setSoilTemp(int soilTemp){
-		this.soilTemp = soilTemp;
-	}
-
-	public int getSoilTemp(){
-		return soilTemp;
 	}
 
 	public void setObsTime(int obsTime){
@@ -220,23 +165,18 @@ public class Fact{
 		return 
 			"Fact{" + 
 			"polar = '" + polar + '\'' + 
-			",accum_prec = '" + accumPrec + '\'' + 
 			",temp = '" + temp + '\'' + 
 			",icon = '" + icon + '\'' + 
 			",pressure_mm = '" + pressureMm + '\'' + 
 			",wind_dir = '" + windDir + '\'' + 
-			",source = '" + source + '\'' + 
 			",feels_like = '" + feelsLike + '\'' + 
 			",wind_gust = '" + windGust + '\'' + 
 			",condition = '" + condition + '\'' + 
-			",uv_index = '" + uvIndex + '\'' + 
 			",pressure_pa = '" + pressurePa + '\'' + 
 			",humidity = '" + humidity + '\'' + 
 			",season = '" + season + '\'' + 
 			",wind_speed = '" + windSpeed + '\'' + 
-			",soil_moisture = '" + soilMoisture + '\'' + 
 			",daytime = '" + daytime + '\'' + 
-			",soil_temp = '" + soilTemp + '\'' + 
 			",obs_time = '" + obsTime + '\'' + 
 			"}";
 		}

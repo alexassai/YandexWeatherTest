@@ -1,11 +1,10 @@
 package models;
 
-import java.util.List;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import javax.annotation.Generated;
 
 @Generated("com.robohorse.robopojogenerator")
-public class Response{
+public class Area{
 
 	@JsonProperty("now_dt")
 	private String nowDt;
@@ -16,11 +15,11 @@ public class Response{
 	@JsonProperty("now")
 	private int now;
 
+	@JsonProperty("forecast")
+	private Forecast forecast;
+
 	@JsonProperty("info")
 	private Info info;
-
-	@JsonProperty("forecasts")
-	private List<ForecastsItem> forecasts;
 
 	public void setNowDt(String nowDt){
 		this.nowDt = nowDt;
@@ -46,6 +45,14 @@ public class Response{
 		return now;
 	}
 
+	public void setForecast(Forecast forecast){
+		this.forecast = forecast;
+	}
+
+	public Forecast getForecast(){
+		return forecast;
+	}
+
 	public void setInfo(Info info){
 		this.info = info;
 	}
@@ -54,23 +61,15 @@ public class Response{
 		return info;
 	}
 
-	public void setForecasts(List<ForecastsItem> forecasts){
-		this.forecasts = forecasts;
-	}
-
-	public List<ForecastsItem> getForecasts(){
-		return forecasts;
-	}
-
 	@Override
  	public String toString(){
 		return 
-			"Response{" + 
+			"Area{" + 
 			"now_dt = '" + nowDt + '\'' + 
 			",fact = '" + fact + '\'' + 
 			",now = '" + now + '\'' + 
+			",forecast = '" + forecast + '\'' + 
 			",info = '" + info + '\'' + 
-			",forecasts = '" + forecasts + '\'' + 
 			"}";
 		}
 }
