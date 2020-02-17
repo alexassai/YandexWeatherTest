@@ -2,6 +2,9 @@ package Yandex.Weather;
 
 import controllers.WeatherRequestCtrl;
 import io.restassured.RestAssured;
+import io.restassured.builder.RequestSpecBuilder;
+import io.restassured.builder.ResponseSpecBuilder;
+import io.restassured.filter.log.LogDetail;
 import io.restassured.http.ContentType;
 import io.restassured.specification.RequestSpecification;
 import models.Area;
@@ -25,6 +28,8 @@ public class WeatherTest {
 
   private RequestSpecification requestSpecification;
   private Area response;
+  //private WeatherRequest WeatherRequestMoscow = new WeatherRequest(55.75396, 55.75396);
+  private WeatherRequest WeatherRequest;
 
 //  public void testMoscow() {
 //    // Moscow - lat: 55.75396, lon: 37.620393
@@ -44,7 +49,6 @@ public class WeatherTest {
             .header("X-Yandex-API-Key", "c6f1a85b-f593-40a8-8d5a-4b0f23c8c398")
             .param("lat", "55.75396")
             .param("lon", "37.620393")
-          //  .param("limit", "2")
             .log().all()
             .when().get()
             .then()
@@ -53,16 +57,11 @@ public class WeatherTest {
     System.out.println(response.toString());
   }
 
+@Test
+  public void MoscowTest1(){
 
-  @Test
-  public void ABC (){
-
-    WeatherRequest MoscowRequest = new WeatherRequest(37.620393, 55.75396);
-    Area MoscowResponse = new WeatherRequestCtrl(MoscowRequest).sendWeatherRequest();
-    System.out.println((MoscowResponse.toString()));
-
-    assumeTrue("abc".contains("a"));
-
+  Area result = new WeatherRequestCtrl().creteNewRequest();
+  System.out.println(result);
+}
   }
-    }
 
