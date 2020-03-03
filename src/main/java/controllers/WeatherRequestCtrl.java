@@ -39,13 +39,13 @@ public class WeatherRequestCtrl {
     }
 
 
-    public WeatherRequestCtrl(Info info1) {
+    public WeatherRequestCtrl(Info info) {
         RequestSpecification requestSpecification1 = new RequestSpecBuilder()
                 .addHeader("X-Yandex-API-Key", "c6f1a85b-f593-40a8-8d5a-4b0f23c8c398")
                 .setBaseUri("https://api.weather.yandex.ru")
                 .setBasePath("/v1/informers?")
-                .addParam("lat", info1.getLat())
-                .addParam("lon", info1.getLon())
+                .addParam("lat", info.getLat())
+                .addParam("lon", info.getLon())
                 .setContentType(ContentType.JSON)
                 .log(LogDetail.ALL).build();
 
