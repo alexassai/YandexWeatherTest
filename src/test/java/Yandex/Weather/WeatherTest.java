@@ -2,42 +2,18 @@ package Yandex.Weather;
 
 import controllers.WeatherRequestCtrl;
 import io.restassured.RestAssured;
-import io.restassured.builder.RequestSpecBuilder;
-import io.restassured.builder.ResponseSpecBuilder;
-import io.restassured.filter.log.LogDetail;
 import io.restassured.http.ContentType;
 import io.restassured.specification.RequestSpecification;
 import models.Area;
 import models.Info;
 import models.WeatherRequest;
-import org.junit.*;
-
-import static org.junit.jupiter.api.Assertions.fail;
-import static org.junit.jupiter.api.Assumptions.assumeTrue;
-
-import org.junit.jupiter.api.AfterAll;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
-
-import static io.restassured.RestAssured.given;
 
 public class WeatherTest {
 
   private RequestSpecification requestSpecification;
   private Area response;
-  //private WeatherRequest WeatherRequestMoscow = new WeatherRequest(55.75396, 55.75396);
   private WeatherRequest WeatherRequest;
-
-//  public void testMoscow() {
-//    // Moscow - lat: 55.75396, lon: 37.620393
-//    Area MoscowRequest = new Area(37.620393, 55.75396, 2);
-//    Area MoscowResponse = new WeatherRequestCtrl(MoscowRequest).sendWeatherRequest();
-//    }
-//
-//  }
 
 
   @Test
@@ -59,9 +35,8 @@ public class WeatherTest {
 
 @Test
   public void MoscowTest1(){
-
-  Area result = new WeatherRequestCtrl().creteNewRequest();
-  System.out.println(result);
+  Info Moscow = new Info(55.75396, 37.620393);
+  new WeatherRequestCtrl(Moscow);
 }
   }
 
