@@ -15,6 +15,16 @@ public class Info{
 	@JsonProperty("url")
 	private String url;
 
+	public Info(double lon, double lat) {
+		this.lon = lon;
+		this.lat = lat;
+	}
+
+	public Info() {
+		super();
+	}
+
+
 	public void setLon(double lon){
 		this.lon = lon;
 	}
