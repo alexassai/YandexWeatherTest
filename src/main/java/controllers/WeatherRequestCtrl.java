@@ -13,6 +13,7 @@ import models.Area;
 import models.Info;
 import models.WeatherRequest;
 import org.hamcrest.Matchers;
+
 import static io.restassured.RestAssured.given;
 
 
@@ -39,13 +40,13 @@ public class WeatherRequestCtrl {
     }
 
 
-    public WeatherRequestCtrl(Info info) {
+    public WeatherRequestCtrl(Area area) {
         RequestSpecification requestSpecification1 = new RequestSpecBuilder()
                 .addHeader("X-Yandex-API-Key", "c6f1a85b-f593-40a8-8d5a-4b0f23c8c398")
                 .setBaseUri("https://api.weather.yandex.ru")
                 .setBasePath("/v1/informers?")
-                .addParam("lat", info.getLat())
-                .addParam("lon", info.getLon())
+                .addParam("lat", area.getInfo().getLat())
+                .addParam("lon", area.getInfo().getLon())
                 .setContentType(ContentType.JSON)
                 .log(LogDetail.ALL).build();
 
@@ -54,8 +55,8 @@ public class WeatherRequestCtrl {
                 .expectResponseTime(Matchers.lessThan(15000L))
                 .build();
         RestAssured.defaultParser = Parser.JSON;
-
-
-        System.out.println(given(requestSpecification1, responseSpecification1).get().as(Area.class).toString());
+       area = given(requestSpecification1, responseSpecification1).get().as(Area.class);
+       System.out.println(area.toString() + "jopa");
+      //  System.out.println(given(requestSpecification1, responseSpecification1).get().as(Area.class).toString());
     }
 }

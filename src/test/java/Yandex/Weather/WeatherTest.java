@@ -35,8 +35,17 @@ public class WeatherTest {
 
 @Test
   public void MoscowTest1(){
-  Info Moscow = new Info(37.620393, 55.75396);
-  new WeatherRequestCtrl(Moscow);
+  Area Moscow = new Area(37.620393, 55.75396);
+  WeatherRequestCtrl response =  new WeatherRequestCtrl(Moscow);
+
+  response.
 }
+
+@Test
+  public void MoscowTest2(){
+
+}
+
+
   }
 
