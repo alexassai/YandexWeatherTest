@@ -25,7 +25,6 @@ public class Info {
         super();
     }
 
-
     public void setLon(double lon) {
         this.lon = lon;
     }

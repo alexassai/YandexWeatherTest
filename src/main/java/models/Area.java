@@ -11,8 +11,6 @@ public class Area {
         setInfo(new Info(lon, lat));
     }
 
-    ;
-
     @JsonProperty("now_dt")
     private String nowDt;
 
