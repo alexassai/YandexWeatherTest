@@ -4,7 +4,8 @@
 ~~2) add controllers for MVC paradigm~~  
 
 ~~3) add implementation of writing response and request to classes~~
-4) add allure support with full request-response attachments 
+
+) add allure support with full request-response attachments 
 
 5) add DB support for recording objects in SQLite 
 
