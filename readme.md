@@ -5,7 +5,7 @@
 
 ~~3) add implementation of writing response and request to classes~~
 
-) add allure support with full request-response attachments 
+4) add allure support with full request-response attachments 
 
 5) add DB support for recording objects in SQLite 
 
